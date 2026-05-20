@@ -159,7 +159,7 @@ func TestRun_Files(t *testing.T) {
 func TestRun_DryRun(t *testing.T) {
 	tempDir := t.TempDir()
 	inputPath := filepath.Join("../../testdata", "mixed.input.ts")
-	
+
 	inputBytes, err := os.ReadFile(inputPath)
 	if err != nil {
 		t.Fatalf("failed to read input file: %v", err)
@@ -186,10 +186,10 @@ func TestRun_DryRun(t *testing.T) {
 	os.Stdout = w
 
 	exitCode, err := Run(opts, []string{tempInputPath})
-	
+
 	w.Close()
 	os.Stdout = oldStdout
-	
+
 	var buf bytes.Buffer
 	io.Copy(&buf, r)
 
@@ -213,13 +213,13 @@ func TestRun_DryRun(t *testing.T) {
 
 func TestRun_Recursive(t *testing.T) {
 	tempDir := t.TempDir()
-	
+
 	// Create nested structure
 	nestedDir := filepath.Join(tempDir, "src", "components")
 	if err := os.MkdirAll(nestedDir, 0755); err != nil {
 		t.Fatalf("failed to create dirs: %v", err)
 	}
-	
+
 	// Create excluded directory
 	nodeModulesDir := filepath.Join(tempDir, "node_modules")
 	if err := os.MkdirAll(nodeModulesDir, 0755); err != nil {

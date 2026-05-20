@@ -13,7 +13,7 @@ func TestNewConverter(t *testing.T) {
 		if !conv.skipExclusionZones {
 			t.Error("expected skipExclusionZones to be true by default")
 		}
-		
+
 		out, count := conv.Convert("colour is nice", "test")
 		if out != "color is nice" {
 			t.Errorf("expected 'color is nice', got '%s'", out)
@@ -28,7 +28,7 @@ func TestNewConverter(t *testing.T) {
 		if err != nil {
 			t.Fatalf("unexpected error: %v", err)
 		}
-		
+
 		out, count := conv.Convert("color is nice", "test")
 		if out != "colour is nice" {
 			t.Errorf("expected 'colour is nice', got '%s'", out)
@@ -46,7 +46,7 @@ func TestNewConverter(t *testing.T) {
 		if err != nil {
 			t.Fatalf("unexpected error: %v", err)
 		}
-		
+
 		input := "```colour```"
 		out, count := conv.Convert(input, "test")
 		// Should replace inside code block because SkipExclusionZones is false

@@ -130,14 +130,14 @@ func Convert(input string, dict map[string]string, skipExclusionZones bool, file
 	// Let's implement the self-check during the first pass, right after writing to `buf`.
 	// Wait, the spec explicitly says: "scan the output for any remaining dictionary key at a word boundary".
 	// Let's calculate the line number for the *output*.
-	
+
 	// Actually, if we just check the non-excluded tokens:
 	// We can't just do that because the replacement itself might introduce a dictionary key!
 	// So we need to check the newly written string.
 	// Let's calculate the line numbers of `result` and check.
 	// But how do we avoid false positives in exclusion zones?
 	// We can map `result` offsets back to `input` offsets, or simply apply `exclusionPatterns` on `result`!
-	
+
 	var resultExclusions []interval
 	if skipExclusionZones {
 		for _, re := range exclusionPatterns {

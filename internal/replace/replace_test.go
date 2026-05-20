@@ -6,11 +6,11 @@ import (
 
 func TestConvert_WordBoundaryEnforcement(t *testing.T) {
 	dict := map[string]string{
-		"organise":  "organize",
-		"colour":    "color",
-		"programme": "program",
+		"organise":   "organize",
+		"colour":     "color",
+		"programme":  "program",
 		"reorganise": "reorganize",
-		"recognise": "recognize",
+		"recognise":  "recognize",
 	}
 
 	tests := []struct {

@@ -32,7 +32,7 @@ func LoadDictionary(direction Direction, userDictPath string) (map[string]string
 		if err != nil {
 			return nil, fmt.Errorf("failed to read user dictionary at %s: %w", userDictPath, err)
 		}
-		
+
 		userDict := make(map[string]string)
 		if err := json.Unmarshal(userData, &userDict); err != nil {
 			return nil, fmt.Errorf("failed to parse user dictionary: %w", err)
