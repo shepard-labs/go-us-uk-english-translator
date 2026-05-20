@@ -8,6 +8,7 @@ All operations are dictionary-driven using an embedded JSON dictionary, ensuring
 [![Go Reference](https://pkg.go.dev/badge/github.com/shepard-labs/go-us-uk-english-translator.svg)](https://pkg.go.dev/github.com/shepard-labs/go-us-uk-english-translator)
 [![Go Report Card](https://goreportcard.com/badge/github.com/shepard-labs/go-us-uk-english-translator)](https://goreportcard.com/report/github.com/shepard-labs/go-us-uk-english-translator)
 [![license](https://img.shields.io/badge/license-%20%20GNU%20GPLv3%20-green?style=plastic)](https://img.shields.io/badge/license-%20%20GNU%20GPLv3%20-green?style=plastic)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/shepard-labs/go-us-uk-english-translator)
 
 ---
 
